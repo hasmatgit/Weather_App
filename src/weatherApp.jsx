@@ -1,29 +1,27 @@
 import { useState } from "react";
-import SearchBox from "./Searchbox";
-import InfoBox from "./infoBox";
+import SearchBox from "./SearchBox";  // Ensure correct case
+import InfoBox from "./InfoBox";      // Ensure correct case
 
 export default function WeatherApp() {
-    const [WeatherInfo, setWeatherInfo] = useState({
+    const [weatherInfo, setWeatherInfo] = useState({
         city: "Delhi",
-        feelslike: 9.54,
+        feelsLike: 9.54,
         humidity: 93,
         temp: 10.05,
         tempMin: 10.05,
-        temtMax: 10.05,
+        tempMax: 10.05,  // Fixed typo here
         weather: "mist",
     });
 
-    let updateInfo =(newInfo) => {
+    const updateInfo = (newInfo) => {
         setWeatherInfo(newInfo);
     }
 
     return (
         <div style={{ textAlign: "center" }}>
             <h2>Weather App by Hasmat</h2>
-            <SearchBox updateInfo={updateInfo}/>
-            <InfoBox info={WeatherInfo}/>
-            {/* <InfoBox info={weatherInfo}/> */}
-
+            <SearchBox updateInfo={updateInfo} />
+            <InfoBox info={weatherInfo} />  {/* Ensure prop is passed correctly */}
         </div>
     );
 }

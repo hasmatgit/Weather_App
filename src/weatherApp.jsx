@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SearchBox from "./SearchBox";  // Ensure correct case
-import InfoBox from "./InfoBox";      // Ensure correct case
+import SearchBox from "./SearchBox.jsx";  // Ensure correct case
+import InfoBox from "./InfoBox.jsx";      // Ensure correct case
 
 export default function WeatherApp() {
     const [weatherInfo, setWeatherInfo] = useState({
